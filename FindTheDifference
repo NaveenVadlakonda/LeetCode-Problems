@@ -1,0 +1,15 @@
+class Solution {
+    public char findTheDifference(String s, String t) {
+        char[] sc = s.toCharArray();
+        char[] tc = t.toCharArray();
+        Arrays.sort(sc);
+        Arrays.sort(tc);
+        int i=0;
+        while(i<s.length()){
+            if(sc[i]!=tc[i])
+                return tc[i];
+            i++;
+        }
+        return tc[i];
+    }
+}
